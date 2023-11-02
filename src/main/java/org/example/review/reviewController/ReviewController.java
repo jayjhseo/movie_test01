@@ -3,7 +3,6 @@ package org.example.review.reviewController;
 import org.example.Container;
 import org.example.review.entity.Review;
 import org.example.review.reviewService.ReviewService;
-import org.example.user.entity.User;
 import org.example.util.Util;
 
 import java.util.List;
@@ -45,6 +44,9 @@ public class ReviewController {
         System.out.println("삭제할 리뷰내용의 ID값을 입력해주세요");
         int id = Integer.parseInt(Container.getSc().nextLine());
         Review review = reviewService.getReviewListById(id);
+//        if (review.getUser_id().equals(Container.getLoginedUser().getUser_id())) {
+//
+//        }
         if (review == null) {
             System.out.printf("%d번 리뷰내용이 존재하지 않습니다.\n", id);
             return;

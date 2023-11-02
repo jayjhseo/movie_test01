@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-    @Getter
+import java.util.Map;
+
+@Getter
     @Setter
     @AllArgsConstructor
     public class Review {
@@ -21,11 +23,12 @@ import lombok.Setter;
         private String writing;
         //글(한줄평)
         private String regDate;
-        public Review(int id, int score, String writing, String user_id, String regDate) {
-            this.id = id;
-            this.score = score;
-            this.writing = writing;
-            this.user_id = user_id;
-            this.regDate = regDate;
+
+        public Review(Map<String, Object> row) {
+            this.id = (int)row.get("id");
+            this.score = (int) row.get("score");
+            this.writing = (String) row.get("writing");
+            this.user_id = (String)row.get("user_id");
+            this.regDate = (String)row.get("regDate");
         }
-}
+    }

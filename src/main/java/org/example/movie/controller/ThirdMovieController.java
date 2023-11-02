@@ -12,7 +12,7 @@ public class ThirdMovieController {
             System.out.println("-".repeat(30));
             System.out.println("예매하기\n리뷰작성\n리뷰게시판\n리뷰삭제\n리뷰수정\n돌아가기");
             System.out.println("-".repeat(30));
-            String command = Container.getSc().nextLine();
+            String command = Container.getSc().nextLine().trim();
             switch (command) {
                 case "돌아가기":
                     movieController.run();
