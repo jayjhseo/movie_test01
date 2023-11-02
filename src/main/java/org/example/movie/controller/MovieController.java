@@ -2,6 +2,8 @@ package org.example.movie.controller;
 
 import org.example.Container;
 import org.example.movie.entity.Movie;
+import org.example.review.reviewController.ReviewController;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +19,7 @@ public class MovieController {
         FirstMovieController firstMovieController = new FirstMovieController();
         SecondMovieController secondMovieController = new SecondMovieController();
         ThirdMovieController thirdMovieController = new ThirdMovieController();
+        ReviewController reviewController = new ReviewController();
         Scanner sc = Container.getSc();
 
         StringBuilder sb = new StringBuilder();
@@ -34,17 +37,18 @@ public class MovieController {
         }
         System.out.print("\n명령 ) ");
         String command = sc.nextLine();
-//
-        if (command.equals(movieNameList.get(0))) {
-            firstMovieController.run();
-        }
 
-        if (command.equals(movieNameList.get(1))) {
-            secondMovieController.run();
-        }
+            if (command.equals(movieNameList.get(0))) {
+                firstMovieController.run();
+            }
 
-        if (command.equals(movieNameList.get(2))) {
-            thirdMovieController.run();
-        }
+            if (command.equals(movieNameList.get(1))) {
+                secondMovieController.run();
+            }
+
+            if (command.equals(movieNameList.get(2))) {
+                thirdMovieController.run();
+            }
+
     }
 }
