@@ -46,8 +46,9 @@ SELECT * FROM movie_reservation;
 
 CREATE TABLE review (
 	id int UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	score int NULL,
-	writing text null
+	score int NOT NULL,
+	writing text NOT NULL,
+	user_id varchar(30) NOT NULL
 );
 
 SELECT * FROM review;

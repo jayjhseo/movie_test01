@@ -6,15 +6,19 @@ import org.example.review.reviewController.ReviewController;
 public class FirstMovieController {
     ReviewController reviewController = new ReviewController();
     MovieController movieController = new MovieController();
+//    TicketingController ticketingController = new TicketingController();
 
     public void run() {
         while (true) {
-            System.out.println("예매하기 / 리뷰작성");
+            System.out.println("-".repeat(30));
+            System.out.println("예매하기\n리뷰작성\n리뷰게시판\n리뷰삭제\n리뷰수정\n돌아가기");
+            System.out.println("-".repeat(30));
             String command = Container.getSc().nextLine();
             switch (command) {
                 case "돌아가기":
                     movieController.run();
                 case "예매하기":
+//                    ticketingController.run();
                     break;
                 case "리뷰작성":
                     reviewController.write();

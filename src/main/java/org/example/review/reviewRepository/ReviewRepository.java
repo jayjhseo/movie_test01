@@ -9,9 +9,9 @@ public class ReviewRepository {
     List<Review> reviewList = new ArrayList<>();
     int lastId = 0;
 
-    public int create(int score, String writing, int reservation_Id) {
+    public int create(int score, String writing, String user_id, String regDate) {
         lastId++;
-        Review review = new Review(lastId, score, writing, reservation_Id);
+        Review review = new Review(lastId, score, writing, user_id, regDate);
         reviewList.add(review);
 
         return lastId;

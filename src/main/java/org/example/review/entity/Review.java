@@ -11,7 +11,7 @@ import lombok.Setter;
         private int id;
         //리뷰 id(고유번호)
 
-        private int user_id;
+        private String user_id;
         //예매정보id
         //예매정보말고 작성자 추가
 
@@ -20,8 +20,12 @@ import lombok.Setter;
 
         private String writing;
         //글(한줄평)
-        public Review(int lastId, int score, String writing, int reservation_Id) {
+        private String regDate;
+        public Review(int id, int score, String writing, String user_id, String regDate) {
+            this.id = id;
             this.score = score;
             this.writing = writing;
+            this.user_id = user_id;
+            this.regDate = regDate;
         }
 }
