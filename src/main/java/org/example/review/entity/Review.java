@@ -11,7 +11,7 @@ import lombok.Setter;
         private int id;
         //리뷰 id(고유번호)
 
-        private int reservation_id;
+        private int user_id;
         //예매정보id
         //예매정보말고 작성자 추가
 
